@@ -13,6 +13,10 @@
     src: url('/style/typo/CascadiaCode-jEZzj.ttf');
 }
 
+@font-face{
+    font-family: 'CODEBARRE';
+    src: url('/style/typo/BarcodeFont.ttf');
+}
 
 body{
     margin: 0;
@@ -76,37 +80,124 @@ nav a:hover{
 }
 .premiereZone nav {
   width: 220px; /* largeur fixe */
-    background-color: #f0f0f0;
-    padding: 2rem 1.5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+    padding-top: 8rem;
 }
 
 .passeport{
-    background-color:#d9dcc5 ;
-    height: 20rem;
-    width: 30rem;
+    background-color:#7f9ae5 ;
+    height: 25rem;
+    width: 40rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 4rem;
 
+    
 }
 .passeportInside{
-    background-color:#d0ccbd ;
-    height: 18rem;
-    width: 28rem;
+    background-color:#c2d1f2 ;
+    height: 23rem;
+    width: 38rem;
     border-radius: 1rem;
+    
+    
+}
+.allpasseport{
+    padding-left: 25rem;
+    padding-top: 8rem;
+}
+
+.passeportVideo{
+    width: 9rem;
+    height: 100%;
+    object-fit: cover;
+    float: right;
     
 }
 
+.imageprofil{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    object-fit: cover;
+   
+}
+
+.imageprofil img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+   
+
+}
+
+.couleurline{
+    background-color:#e1235a;
+    height: 1.7rem;
+    width: 100%;
+    margin-top: 0.4rem;
+
+}
+
+.codebarre{
+    font-family: 'CODEBARRE';
+    color:#e1235a;
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin-top: 0.2rem;
+    
+    
+}
+.codebarre:hover{
+    color:#1751bc;
+}
+
+.passeportTitle{
+    font-family: 'NAV';
+    width: 12rem;
+    height: 19rem;
+    float: right;
+    margin-top: 1rem;
+    color: #1751bc;
+   
+    
+
+}
+
+.passeportTitle h4{
+    
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    
+
+}
 
 
-
-
-
-
+.passeportTitle a{
+    display:flex;
+    text-decoration: none;
+    color:#1751bc;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
+    
+    
+    
+    
+    
+}
+.passeportTitle a:hover{
+    color:#e1235a;  }
+    
 
 
 

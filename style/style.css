@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'POINAMBALOM LISA';
+    src: url('/style/typo/squarex st.ttf');
+}
+
+@font-face {
+    font-family: 'DEVELOPPEUSE';
+    src: url('/style/typo/CascadiaCode-jEZzj.ttf');
+}
+
+@font-face {
+    font-family: 'NAV';
+    src: url('/style/typo/CascadiaCode-jEZzj.ttf');
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#f7e7ef;
+    
+
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    padding-top: 0.2rem;
+
+    
+}
+h1{
+    
+    font-family:"POINAMBALOM LISA";
+    letter-spacing:0.2em;
+    color:#1751bc;
+    margin-bottom: 0.2rem;
+    font-size: 4rem;
+    transform: translateX(6em);
+}
+
+h3{
+    
+    font-family:"DEVELOPPEUSE";
+    letter-spacing:0.2em;
+    color:#1751bc;
+    font-size: 2em;
+    margin-top:0;
+    transform: translateX(30em);
+    
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    gap:5rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    
+
+    
+}
+nav a{
+    text-decoration: none;
+    color:#1751bc;
+    font-family: 'NAV';    
+}
+nav a:hover{
+    color:#e1235a;
+}
+.premiereZone{
+    display:flex;
+    height: 100vh;
+    
+    
+}
+.premiereZone nav {
+  width: 220px; /* largeur fixe */
+    background-color: #f0f0f0;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.passeport{
+    background-color:#d9dcc5 ;
+    height: 20rem;
+    width: 30rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.passeportInside{
+    background-color:#d0ccbd ;
+    height: 18rem;
+    width: 28rem;
+    border-radius: 1rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 3rem;
+        transform: translateX(5em);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        transform: translateX(15em);
+    }
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+        transform: translateX(3em);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        transform: translateX(8em);
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6rem;
+        transform: translateX(1em);
+    }
+
+    h3 {
+        font-size: 1rem;
+        transform: translateX(2em);
+    }
+}

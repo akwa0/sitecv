@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POINAMBALOM LISA</title>
     <link rel="stylesheet" href="style/style.css">
-
+    
 
 </head>
 <body>
+    <script src="script.js" defer></script>
     <div class="container">
     <h1>POINAMBALOM LISA</h1>
     <h3>DEVELOPPEUSE WEB & ARTISTE</h3>
@@ -20,34 +21,34 @@
         <a href="">Mes projets</a>
         <a href="">Me contacter</a>
     </nav>
+
+    <!--passeport-->
     <div class="allpasseport">
     <div class="passeport">
         
         <div class="passeportInside">
             <img  class="passeportVideo" src="/style/media/Illustration_sans_titre 9.png" alt="">
            <div class="passeportTitle"><h4>PASS CARD</h4>
-        <a href="">Competence : click here</a>
-        <a href="">Formation : click here</a>
-        <a href="">Experience : click here</a> 
-        <a href="">Langues : FR / EN</a>
-    
-    
+        <a href="#" data-section="competences">Competence : click here</a>
+        <a href="#" data-section="formation">Formation : click here</a>
+        <a href="#" data-section="experience">Experience : click here</a> 
+        <a href="#" data-section="langues">Langues : FR / EN</a>
     
     </div>
-        
             <div class="imageprofil">
                 <img src="/style/media/IMG_0468.png" alt="">
                 <div class="couleurline"></div>
                 <a class="codebarre" href="">..............Logiciel..............</a>
-                
                 </div>
-       
-            
         </div>
-        
     </div>
-    
     </div>    
+    <div id="infoBox" class="infoBox hidden">
+        <button id="closeBox">X</button>
+        <div id="infoContent"></div>
+    </div>
 </div>    
+
+
 </body>
 </html>

@@ -87,38 +87,7 @@ nav a:hover{
     padding-top: 8rem;
 }
 
-.passeport{
-    background-color:#7f9ae5 ;
-    height: 25rem;
-    width: 40rem;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
 
-    
-}
-.passeportInside{
-    background-color:#c2d1f2 ;
-    height: 23rem;
-    width: 38rem;
-    border-radius: 1rem;
-    
-    
-}
-.allpasseport{
-    padding-left: 25rem;
-    padding-top: 8rem;
-}
-
-.passeportVideo{
-    width: 9rem;
-    height: 100%;
-    object-fit: cover;
-    float: right;
-    
-}
 
 .imageprofil{
     width: 15rem;
@@ -131,6 +100,8 @@ nav a:hover{
    
 }
 
+
+/*photo, ligne et code barre*/
 .imageprofil img {
     width: 100%;
     height: 17rem;
@@ -160,6 +131,12 @@ nav a:hover{
     color:#1751bc;
 }
 
+
+
+
+
+
+/*Passesort*/
 .passeportTitle{
     font-family: 'NAV';
     width: 12rem;
@@ -200,6 +177,71 @@ nav a:hover{
     
 
 
+.passeport{
+    background-color:#7f9ae5 ;
+    height: 25rem;
+    width: 40rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    
+}
+.passeportInside{
+    background-color:#c2d1f2 ;
+    height: 23rem;
+    width: 38rem;
+    border-radius: 1rem;
+    
+    
+}
+.allpasseport{
+    padding-left: 25rem;
+    padding-top: 8rem;
+}
+
+.passeportVideo{
+    width: 9rem;
+    height: 100%;
+    object-fit: cover;
+    float: right;
+    
+}
+
+/*infoBox*/
+
+.infoBox{
+    position:absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 20rem;
+    background-color:#1751bc;
+    border: 2px solid #fff;
+    border-radius:1rem;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-family:'NAV';
+    color:#fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.hidden{
+    opacity: 0;
+    transform: translateY(3rem);    
+    pointer-events: none;
+}
+
+#closeBox{
+    background: none;
+    border:none;
+    font-size: 1.2rem;
+    float:right;
+    cursor:pointer;
+    
+}
 
 
 
@@ -217,10 +259,7 @@ nav a:hover{
 
 
 
-
-
-
-
+/* responsive*/
 
 @media (max-width: 1200px) {
     h1 {

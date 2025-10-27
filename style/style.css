@@ -212,9 +212,9 @@ nav a:hover{
 
 /*infoBox*/
 
-.infoBox{
+.BoxFormation{
     position:absolute;
-    top: 3rem;
+    top: 25rem;
     right: 3rem;
     width: 20rem;
     background-color:#1751bc;
@@ -243,6 +243,37 @@ nav a:hover{
     
 }
 
+.BoxExperience{
+    position:absolute;
+    top: 50rem;
+    right: 45rem;
+    width: 20rem;
+    background-color:#1751bc;
+    border: 2px solid #fff;
+    border-radius:1rem;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-family:'NAV';
+    color:#fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.BoxCompetence{
+    position:absolute;
+    top: 25rem;
+    right: 75rem;
+    width: 20rem;
+    background-color:#1751bc;
+    border: 2px solid #fff;
+    border-radius:1rem;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-family:'NAV';
+    color:#fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+}
 
 
 

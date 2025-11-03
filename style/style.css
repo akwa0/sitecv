@@ -217,15 +217,45 @@ nav a:hover{
     top: 25rem;
     right: 3rem;
     width: 20rem;
-    background-color:#1751bc;
-    border: 2px solid #fff;
+    background-color:#dc204d80;
+    border: 2px solid #dc204d;
     border-radius:1rem;
     padding: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     font-family:'NAV';
     color:#fff;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 1;
+    opacity: 0,5;
+}
+.BoxExperience{
+    position:absolute;
+    top: 50rem;
+    right: 42rem;
+    width: 20rem;
+    background-color: #dc204d80;
+    border: 2px solid #dc204d;
+    border-radius:1rem;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-family:'NAV';
+    color:#fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0,5;
+}
+.BoxCompetence{
+    position:absolute;
+    top: 25rem;
+    right: 75rem;
+    width: 20rem;
+    background-color:#dc204d80;
+    border: 2px solid #dc204d;
+    border-radius:1rem;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-family:'NAV';
+    color:#fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0,5;
 }
 
 .hidden{
@@ -243,37 +273,9 @@ nav a:hover{
     
 }
 
-.BoxExperience{
-    position:absolute;
-    top: 50rem;
-    right: 45rem;
-    width: 20rem;
-    background-color:#1751bc;
-    border: 2px solid #fff;
-    border-radius:1rem;
-    padding: 1rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    font-family:'NAV';
-    color:#fff;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 1;
-}
 
-.BoxCompetence{
-    position:absolute;
-    top: 25rem;
-    right: 75rem;
-    width: 20rem;
-    background-color:#1751bc;
-    border: 2px solid #fff;
-    border-radius:1rem;
-    padding: 1rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    font-family:'NAV';
-    color:#fff;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 1;
-}
+
+
 
 
 

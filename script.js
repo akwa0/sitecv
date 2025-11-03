@@ -51,8 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Boutons de fermeture
   document.querySelectorAll(".closeBox").forEach(btn => {
     btn.addEventListener("click", function () {
-      const box = btn.closest(".BoxFormation, .BoxExperience, .BoxCompetence");
-      box.classList.add("hidden");
+      btn.parentElement.classList.add("hidden");
     });
   });
 });

@@ -9,18 +9,37 @@ document.addEventListener("DOMContentLoaded", function () {
   // Le contenu à afficher
   const contents = {
     formation: `
-      <h5>Formation</h5>
-      <p>2023 - 2025 : Développement Web Fullstack</p>
-      <p>2022 : Graphisme & Identité visuelle</p>
+      <span class="code-block">
+  <pre id="formation-code">
+<span class="tag">&lt;h5&gt;</span><span class="text">Formation</span><span class="tag">&lt;/h5&gt;</span>
+<span class="spacer"></span>
+<span class="tag">&lt;p&gt;</span><span class="value">2023 - 2025 : Développement Web Fullstack</span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="value">2022 : Graphisme &amp; Identité visuelle</span><span class="tag">&lt;/p&gt;</span>
+  </pre>
+  </span>
+
+
     `,
     experience: `
-      <h5>Expérience</h5>
-      <p>2021 - 2023 : Stage et projets personnels</p>
-      <p>2020 : Freelance graphiste</p>
+    <span class="code-block">
+  <pre id="formation-code">
+  <span class="tag">&lt;h5&gt;</span><span class="text">Expérience</span><span class="tag">&lt;/h5&gt;</span>
+  <span class="spacer"></span>
+  <span class="tag">&lt;p&gt;</span><span class="value">2023 - 2025 : Stage et projets personnels</span><span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;p&gt;</span><span class="value">2022 : Freelance graphiste</span><span class="tag">&lt;/p&gt;</span>
+   </pre>
+     </span>
+    
     `,
     competence: `
-      <h5>Compétences</h5>
-      <p>HTML, CSS, JavaScript, Figma, Photoshop...</p>
+     
+      <span class="code-block">
+  <pre id="formation-code">
+  <span class="tag">&lt;h5&gt;</span><span class="text">Compétences</span><span class="tag">&lt;/h5&gt;</span>
+  <span class="spacer"></span>
+  <span class="tag">&lt;p&gt;</span><span class="value">HTML, CSS, JavaScript, Figma, Photoshop...</span><span class="tag">&lt;/p&gt;</span>
+  </pre>
+  </span>
     `
   };
 

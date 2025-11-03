@@ -216,9 +216,9 @@ nav a:hover{
     position:absolute;
     top: 25rem;
     right: 3rem;
-    width: 20rem;
-    background-color:#dc204d80;
-    border: 2px solid #dc204d;
+    width: 25rem;
+    background-color:#01031bd1;
+    border: 2px solid #144bbc;
     border-radius:1rem;
     padding: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
@@ -230,10 +230,10 @@ nav a:hover{
 .BoxExperience{
     position:absolute;
     top: 50rem;
-    right: 42rem;
-    width: 20rem;
-    background-color: #dc204d80;
-    border: 2px solid #dc204d;
+    right: 40rem;
+    width: 25rem;
+    background-color: #01031bd1;
+    border: 2px solid #144bbc;
     border-radius:1rem;
     padding: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
@@ -246,9 +246,9 @@ nav a:hover{
     position:absolute;
     top: 25rem;
     right: 75rem;
-    width: 20rem;
-    background-color:#dc204d80;
-    border: 2px solid #dc204d;
+    width: 25rem;
+    background-color:#01031bd1;
+    border: 2px solid #144bbc;
     border-radius:1rem;
     padding: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
@@ -272,6 +272,54 @@ nav a:hover{
     cursor:pointer;
     
 }
+
+.code-block {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+ 
+ 
+  
+}
+.code-block .spacer::before {
+  content: "\A"; /* saut de ligne */
+  white-space: pre; 
+  display: block;
+  height: 10px; /* hauteur de l'espace, à ajuster */
+}
+
+.code-block .tag {
+  color: #569cd6; /* balises HTML */
+}
+
+.code-block .text {
+  color: #d4d4d4; /* texte clair */
+}
+
+.code-block .value {
+  color: #d4d4d4; /* orange clair pour contenu */
+}
+
+/* Effet "écriture" */
+#formation-code {
+ 
+  border-right: 2px solid #ffffff55;
+  width: 0;
+  overflow: hidden;
+  white-space: pre;
+  animation: typing 5s steps(100, end) forwards, blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+
 
 
 

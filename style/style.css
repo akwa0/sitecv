@@ -355,9 +355,98 @@ nav a:hover{
 }
 
 
+#ZoneProjet img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
 
 
 
+#notebook{
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  transition: transform 1.2s ease-in-out;
+  z-index: 2;
+}
+.pages {
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 1;
+}
+.notebook.open #carnet {
+  transform: rotateY(-150deg);
+}
+.notebook.open .pages {
+  opacity: 1;
+}
+
+
+
+
+
+.notebook {
+  position: relative;
+  width: 100rem; /* ajuste selon ton image */
+  height: auto;
+  margin: auto;
+  cursor: pointer;
+}
+
+.notebook img {
+  width: 100%;
+  display: block;
+}
+
+/* L'image de base (le carnet de fond) */
+.base-image {
+  position: relative;
+  z-index: 0;
+}
+
+/* La couverture (au-dessus du carnet) */
+#carnet,#carnet2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* au-dessus */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* L'image des pages intérieures */
+.pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* Quand le carnet est "ouvert" */
+.notebook.open #carnet {
+  opacity: 0; /* fait disparaître la couverture */
+}
+
+.notebook.open .pages {
+  opacity: 1; /* fait apparaître les pages */
+}
 
 
 

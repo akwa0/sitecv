@@ -73,4 +73,24 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.parentElement.classList.add("hidden");
     });
   });
+
+ const notebook = document.querySelector(".notebook");
+if (notebook) {
+  const frontImg = notebook.querySelector("#carnet");
+  const pagesImg = notebook.querySelector(".pages img");
+
+  if (frontImg && pagesImg) {
+    // mémorise le src original pour pouvoir revenir en arrière si besoin
+    const originalSrc = frontImg.src;
+    const targetSrc = pagesImg.src;
+
+    notebook.addEventListener("click", () => {
+      // remplace l'image de la couverture par celle de l'intérieur
+      frontImg.src = targetSrc;
+      // si tu veux masquer la zone .pages (optionnel)
+      // notebook.querySelector(".pages").style.display = "none";
+    });
+  }
+}
+
 });

@@ -400,13 +400,13 @@ nav a:hover{
 .notebook {
   position: relative;
   width: 100rem; /* ajuste selon ton image */
-  height: auto;
   margin: auto;
+  height: 60rem;
   cursor: pointer;
 }
 
 .notebook img {
-  width: 100%;
+  width: 100rem;
   display: block;
 }
 
@@ -417,7 +417,7 @@ nav a:hover{
 }
 
 /* La couverture (au-dessus du carnet) */
-#carnet,#carnet2 {
+#carnet {
   position: absolute;
   top: 0;
   left: 0;
@@ -426,9 +426,35 @@ nav a:hover{
   z-index: 2; /* au-dessus */
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+#zone1, #zone2 {
+  position: absolute;
+  top: 0;
+ 
+  
+  cursor: pointer;
+  z-index: 3; /* au-dessus du carnet */
+  background-color: transparent; /* deviens invisible, tu peux remettre la couleur pour debug */
+}
+#zone1 {
+  right: 50%;
+  width: 25%;
+  opacity: 20%;
+   height: 40em;
+   top: 13rem;
+  /* background-color: rgba(0, 255, 255, 0.2);  <-- à garder temporairement pour tester */
+}
 
+/* moitié droite */
+#zone2 {
+  right: 3%;
+  width: 24rem;
+  opacity: 40%;
+   height: 35em;
+   top: 15rem;
+  /* background-color: rgba(255, 0, 0, 0.2);  <-- à garder temporairement pour tester */
+}
 /* L'image des pages intérieures */
-.pages {
+.pagesPRo, .pagesPerso {
   position: absolute;
   top: 0;
   left: 0;

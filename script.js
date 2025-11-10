@@ -73,24 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.parentElement.classList.add("hidden");
     });
   });
-
- const notebook = document.querySelector(".notebook");
-if (notebook) {
+   const zone1 = document.getElementById('zone1');
+  const zone2 = document.getElementById('zone2');
+  const notebook = document.querySelector(".notebook");
   const frontImg = notebook.querySelector("#carnet");
-  const pagesImg = notebook.querySelector(".pages img");
+  const pagesImg = notebook.querySelector(".pagesPRo img");
+  const pagesImgPerso = notebook.querySelector(".pagesPerso img");
 
-  if (frontImg && pagesImg) {
-    // mémorise le src original pour pouvoir revenir en arrière si besoin
-    const originalSrc = frontImg.src;
-    const targetSrc = pagesImg.src;
+  zone1.addEventListener('click', () => {
+    frontImg.src = pagesImg.src;
+  });
 
-    notebook.addEventListener("click", () => {
-      // remplace l'image de la couverture par celle de l'intérieur
-      frontImg.src = targetSrc;
-      // si tu veux masquer la zone .pages (optionnel)
-      // notebook.querySelector(".pages").style.display = "none";
-    });
-  }
-}
+  zone2.addEventListener('click', () => {
+    frontImg.src = pagesImgPerso.src;
+  });
+
+
 
 });

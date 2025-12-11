@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const frontImg = notebook.querySelector("#carnet");
   const pagesImg = notebook.querySelector(".pagesPRo img");
   const pagesImgPerso = notebook.querySelector(".pagesPerso img");
+  const originalSrc = frontImg.src; 
 
   zone1.addEventListener('click', () => {
     frontImg.src = pagesImg.src;
@@ -88,6 +89,22 @@ document.addEventListener("DOMContentLoaded", function () {
     frontImg.src = pagesImgPerso.src;
   });
 
+ const zonePasseport = document.getElementById('Zone4');
+ const zoneContact = document.getElementById('Zone5');
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight && rect.bottom > 0
+    );
+  }
+
+  // 🔹 Quand on scroll, on vérifie si zonePasseport ou zoneContact est visible
+  window.addEventListener('scroll', () => {
+    if (isInViewport(zonePasseport) || isInViewport(zoneContact)) {
+      // remet l’image d’origine du carnet
+      frontImg.src = originalSrc;
+    }
+  });
 
 });

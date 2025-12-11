@@ -474,8 +474,26 @@ nav a:hover{
   opacity: 1; /* fait apparaître les pages */
 }
 
-
-
+#Zone4{
+    width: 190vh;
+    height: 30vh;
+    background-color: #1751bc;
+    position: absolute;
+    top: 150rem;
+    left: 0;
+    z-index: 4;
+    opacity: 0;
+}
+#Zone5{
+    width: 190vh;
+    height: 50vh;
+    background-color: #bc6c17;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    opacity: 0;
+}
 
 
 

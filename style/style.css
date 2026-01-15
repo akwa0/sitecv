@@ -91,6 +91,7 @@ nav a:hover{
 
 
 .imageprofil{
+    position: relative;
     width: 15rem;
     display: flex;
     flex-direction: column;
@@ -98,7 +99,7 @@ nav a:hover{
     padding-top: 1rem;
     padding-left: 1rem;
     object-fit: cover;
-   
+
 }
 
 
@@ -258,10 +259,33 @@ nav a:hover{
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0,5;
 }
+.tooltipCodeBarre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 17rem;
+    background-color: #01031b;
+    border: 2px solid #144bbc;
+    border-radius: 0;
+    padding: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    font-family: 'NAV';
+    color: #fff;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
 
 .hidden{
     opacity: 0;
-    transform: translateY(3rem);    
+    transform: translateY(3rem);
+    pointer-events: none;
+}
+
+.tooltipCodeBarre.hidden{
+    opacity: 0;
+    transform: none;
     pointer-events: none;
 }
 
@@ -275,10 +299,10 @@ nav a:hover{
 }
 
 .code-block {
+    background-color: #01031b; /* Même fond que vos box */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
- 
- 
+    padding: 1rem;
   
 }
 .code-block .spacer::before {
@@ -483,6 +507,7 @@ nav a:hover{
     left: 0;
     z-index: 4;
     opacity: 0;
+    pointer-events: none;
 }
 #Zone5{
     width: 190vh;
@@ -493,7 +518,9 @@ nav a:hover{
     left: 0;
     z-index: 4;
     opacity: 0;
+    pointer-events: none;
 }
+
 
 
 

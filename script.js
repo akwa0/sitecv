@@ -32,14 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     `,
     competence: `
-     
       <span class="code-block">
   <pre id="formation-code">
-  <span class="tag">&lt;h5&gt;</span><span class="text">Compétences</span><span class="tag">&lt;/h5&gt;</span>
+  <span class="tag">&lt;h5&gt;</span><span class="text">Competences</span><span class="tag">&lt;/h5&gt;</span>
   <span class="spacer"></span>
   <span class="tag">&lt;p&gt;</span><span class="value">HTML, CSS, JavaScript, Figma, Photoshop...</span><span class="tag">&lt;/p&gt;</span>
   </pre>
-  </span>
+      </span>
     `
   };
 
@@ -105,6 +104,17 @@ function isInViewport(element) {
       // remet l’image d’origine du carnet
       frontImg.src = originalSrc;
     }
+  });
+
+  const codebarre = document.querySelector('.codebarre');
+  const tooltipCodeBarre = document.querySelector('.tooltipCodeBarre');
+
+  codebarre.addEventListener('mouseenter', function(){
+    tooltipCodeBarre.classList.remove('hidden');
+  });
+
+  codebarre.addEventListener('mouseleave', function(){
+    tooltipCodeBarre.classList.add('hidden');
   });
 
 });

@@ -263,19 +263,38 @@ nav a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    width: 10rem;
-    height: 17rem;
+    width: 14rem;
+    height: 16rem;
     background-color: #01031b;
     border: 2px solid #144bbc;
     border-radius: 0;
-    padding: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     font-family: 'NAV';
     color: #fff;
     transition: transform 0.3s ease;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
+
+.tooltipCodeBarre .code-block {
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.tooltipCodeBarre #formation-code {
+  border-right: none;
+  width: auto;
+  overflow: visible;
+  white-space: normal;
+  animation: none;
+  text-align: center;
+}
 
 .hidden{
     opacity: 0;
@@ -298,13 +317,7 @@ nav a:hover{
     
 }
 
-.code-block {
-    background-color: #01031b; /* Même fond que vos box */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    padding: 1rem;
-  
-}
+
 .code-block .spacer::before {
   content: "\A"; /* saut de ligne */
   white-space: pre; 

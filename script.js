@@ -6,63 +6,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const BoxExperience = document.getElementById("BoxExperience");
   const BoxCompetence = document.getElementById("BoxCompetence");
 
-  // Le contenu à afficher
-  const contents = {
-    formation: `
-      <span class="code-block">
-  <pre id="formation-code">
-<span class="tag">&lt;h5&gt;</span><span class="text">Formation</span><span class="tag">&lt;/h5&gt;</span>
-<span class="spacer"></span>
-<span class="tag">&lt;p&gt;</span><span class="value">2023 - 2025 : Développement Web Fullstack</span><span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;p&gt;</span><span class="value">2022 : Graphisme &amp; Identité visuelle</span><span class="tag">&lt;/p&gt;</span>
-  </pre>
-  </span>
-
-
-    `,
-    experience: `
-    <span class="code-block">
-  <pre id="formation-code">
-  <span class="tag">&lt;h5&gt;</span><span class="text">Expérience</span><span class="tag">&lt;/h5&gt;</span>
-  <span class="spacer"></span>
-  <span class="tag">&lt;p&gt;</span><span class="value">2023 - 2025 : Stage et projets personnels</span><span class="tag">&lt;/p&gt;</span>
-  <span class="tag">&lt;p&gt;</span><span class="value">2022 : Freelance graphiste</span><span class="tag">&lt;/p&gt;</span>
-   </pre>
-     </span>
-    
-    `,
-    competence: `
-      <span class="code-block">
-  <pre id="formation-code">
-  <span class="tag">&lt;h5&gt;</span><span class="text">Competences</span><span class="tag">&lt;/h5&gt;</span>
-  <span class="spacer"></span>
-  <span class="tag">&lt;p&gt;</span><span class="value">HTML, CSS, JavaScript, Figma, Photoshop...</span><span class="tag">&lt;/p&gt;</span>
-  </pre>
-      </span>
-    `
-  };
-
   function closeAllBoxes() {
     [BoxFormation, BoxExperience, BoxCompetence].forEach(b => b.classList.add("hidden"));
+  }
+
+  // Fonction pour relancer l'animation typing
+  function restartAnimation(section) {
+    const pre = document.getElementById(`formation-code-${section}`);
+    if (pre) {
+      // Supprime et re-ajoute la classe pour relancer l'animation
+      pre.style.animation = 'none';
+      setTimeout(() => {
+        pre.style.animation = 'typing 5s steps(100, end) forwards, blink 1s step-end infinite';
+      }, 10);
+    }
   }
 
   // Fonction utilitaire pour gérer ouverture/fermeture
   function openBox(section) {
     closeAllBoxes(); // Ferme les autres avant d'ouvrir
     const box = document.getElementById(`Box${section.charAt(0).toUpperCase() + section.slice(1)}`);
-    const contentDiv = box.querySelector(".infoContent");
-    contentDiv.innerHTML = contents[section];
     box.classList.remove("hidden");
+
+    // Relance l'animation typing pour cette box
+    restartAnimation(section);
   }
-
-
 
   // Ajout des écouteurs sur les liens
   links.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const section = link.dataset.section;
-      if (contents[section]) openBox(section);
+      openBox(section);
     });
   });
 

@@ -263,8 +263,8 @@ nav a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    width: 14rem;
-    height: 16rem;
+    width: 27rem;
+    height: 17rem;
     background-color: #01031b;
     border: 2px solid #144bbc;
     border-radius: 0;
@@ -308,6 +308,48 @@ nav a:hover{
     pointer-events: none;
 }
 
+.logiciels-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.logiciels-content h5 {
+    text-align: center;
+    color: #144bbc;
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.logiciels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    font-size: 0.6rem;
+    text-align: left;
+}
+
+.logiciels-column h6 {
+    color: #569cd6;
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.logiciels-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+}
+
+.logiciels-column li {
+    color: #d4d4d4;
+    margin-bottom: 0.1rem;
+    font-size: 0.6rem;
+    line-height: 1.2;
+}
+
 #closeBox{
     background: none;
     border:none;
@@ -338,13 +380,14 @@ nav a:hover{
 }
 
 /* Effet "écriture" */
-#formation-code {
- 
+#formation-code-competence,
+#formation-code-formation,
+#formation-code-experience {
   border-right: 2px solid #ffffff55;
   width: 0;
   overflow: hidden;
   white-space: pre;
-  animation: typing 5s steps(100, end) forwards, blink 1s step-end infinite;
+  /* Animation sera ajoutée dynamiquement par JavaScript */
 }
 
 @keyframes typing {

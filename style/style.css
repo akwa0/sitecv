@@ -216,13 +216,14 @@ nav a:hover{
 
 .BoxFormation{
     position:absolute;
-    top: 25rem;
-    right: 3rem;
-    width: 25rem;
+    top: 13rem;
+    left: 84rem;
+    width: 27rem;
+    height: auto;
     background-color:#01031bd1;
     border: 2px solid #144bbc;
     border-radius:1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     font-family:'NAV';
     color:#fff;
@@ -231,13 +232,14 @@ nav a:hover{
 }
 .BoxExperience{
     position:absolute;
-    top: 50rem;
-    right: 40rem;
-    width: 25rem;
+    top: 10rem;
+    right: 74rem;
+    width: 28rem;
+    height: auto;
     background-color: #01031bd1;
     border: 2px solid #144bbc;
     border-radius:1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     font-family:'NAV';
     color:#fff;
@@ -246,13 +248,14 @@ nav a:hover{
 }
 .BoxCompetence{
     position:absolute;
-    top: 25rem;
-    right: 75rem;
-    width: 25rem;
+    top: 47rem;
+    right: 33rem;
+    width: 37rem;
+    height: auto;
     background-color:#01031bd1;
     border: 2px solid #144bbc;
     border-radius:1rem;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     font-family:'NAV';
     color:#fff;
@@ -279,22 +282,6 @@ nav a:hover{
     padding: 1rem;
 }
 
-
-.tooltipCodeBarre .code-block {
-  background-color: transparent;
-  padding: 0;
-  box-shadow: none;
-  text-align: center;
-}
-
-.tooltipCodeBarre #formation-code {
-  border-right: none;
-  width: auto;
-  overflow: visible;
-  white-space: normal;
-  animation: none;
-  text-align: center;
-}
 
 .hidden{
     opacity: 0;
@@ -362,33 +349,39 @@ nav a:hover{
 
 .code-block .spacer::before {
   content: "\A"; /* saut de ligne */
-  white-space: pre; 
+  white-space: pre;
   display: block;
-  height: 10px; /* hauteur de l'espace, à ajuster */
+  height: 15px; /* hauteur de l'espace, à ajuster */
 }
 
 .code-block .tag {
   color: #569cd6; /* balises HTML */
+  font-size: 0.85rem;
 }
 
 .code-block .text {
-  color: #d4d4d4; /* texte clair */
+  color: #4ec9b0; /* titre en cyan */
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .code-block .value {
-  color: #d4d4d4; /* orange clair pour contenu */
+  color: #d4d4d4; /* contenu en gris clair */
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 /* Effet "écriture" */
-#formation-code-competence,
+/*#formation-code-competence,
 #formation-code-formation,
 #formation-code-experience {
   border-right: 2px solid #ffffff55;
   width: 0;
   overflow: hidden;
-  white-space: pre;
+  white-space: pre-wrap;
+  line-height: 1.8;}
   /* Animation sera ajoutée dynamiquement par JavaScript */
-}
+
 
 @keyframes typing {
   from { width: 0; }

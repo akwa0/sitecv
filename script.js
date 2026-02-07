@@ -53,14 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const frontImg = notebook.querySelector("#carnet");
   const pagesImg = notebook.querySelector(".pagesPRo img");
   const pagesImgPerso = notebook.querySelector(".pagesPerso img");
-  const originalSrc = frontImg.src; 
+  const originalSrc = frontImg.src;
+  const btnProjets = document.getElementById('btnProjets');
+  const btnProjetsPerso = document.getElementById('btnProjetsPerso');
 
   zone1.addEventListener('click', () => {
     frontImg.src = pagesImg.src;
+    btnProjets.classList.add('visible');
+    btnProjetsPerso.classList.remove('visible');
   });
 
   zone2.addEventListener('click', () => {
     frontImg.src = pagesImgPerso.src;
+    btnProjets.classList.remove('visible');
+    btnProjetsPerso.classList.add('visible');
   });
 
  const zonePasseport = document.getElementById('Zone4');
@@ -76,8 +82,10 @@ function isInViewport(element) {
   // 🔹 Quand on scroll, on vérifie si zonePasseport ou zoneContact est visible
   window.addEventListener('scroll', () => {
     if (isInViewport(zonePasseport) || isInViewport(zoneContact)) {
-      // remet l’image d’origine du carnet
+      // remet l'image d'origine du carnet
       frontImg.src = originalSrc;
+      btnProjets.classList.remove('visible');
+      btnProjetsPerso.classList.remove('visible');
     }
   });
 
@@ -90,6 +98,70 @@ function isInViewport(element) {
 
   codebarre.addEventListener('mouseleave', function(){
     tooltipCodeBarre.classList.add('hidden');
+  });
+
+  // Gestion du formulaire de contact
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  const messageTextarea = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+
+  // Compteur de caractères
+  if (messageTextarea && charCount) {
+    messageTextarea.addEventListener('input', function() {
+      charCount.textContent = this.value.length;
+    });
+  }
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Formatage professionnel de l'email
+    const subject = `Message de ${name} - Portfolio`;
+    const body = `Bonjour,
+
+Vous avez reçu un nouveau message depuis votre portfolio :
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+De : ${name}
+Email : ${email}
+
+Message :
+${message}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Envoyé depuis votre site portfolio
+`;
+
+    // Encodage pour URL
+    const mailtoLink = `mailto:poinambalom.l@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Ouvre le client email
+    window.location.href = mailtoLink;
+
+    // Affiche un message de confirmation
+    formStatus.textContent = '✓ Votre client email va s\'ouvrir. Cliquez sur "Envoyer" dans votre application email.';
+    formStatus.classList.remove('hidden');
+    formStatus.classList.add('success');
+
+    // Réinitialise le formulaire
+    contactForm.reset();
+
+    // Réinitialise le compteur de caractères
+    if (charCount) {
+      charCount.textContent = '0';
+    }
+
+    // Cache le message après 5 secondes
+    setTimeout(() => {
+      formStatus.classList.add('hidden');
+    }, 5000);
   });
 
 });

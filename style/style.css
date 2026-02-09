@@ -546,25 +546,19 @@ nav a:hover{
   background-color: transparent; /* deviens invisible, tu peux remettre la couleur pour debug */
 }
 #zone1 {
-  right: 50%;
+ 
+  right: 30rem;
   width: 25%;
   opacity: 20%;
    height: 40em;
-   top: 13rem;
+   top: 18rem;
   /* background-color: rgba(0, 255, 255, 0.2);  <-- à garder temporairement pour tester */
 }
 
-/* moitié droite */
-#zone2 {
-  right: 3%;
-  width: 24rem;
-  opacity: 40%;
-   height: 35em;
-   top: 15rem;
-  /* background-color: rgba(255, 0, 0, 0.2);  <-- à garder temporairement pour tester */
-}
+
+
 /* L'image des pages intérieures */
-.pagesPRo, .pagesPerso {
+.pagesPRo {
   position: absolute;
   top: 0;
   left: 0;
@@ -587,18 +581,18 @@ nav a:hover{
 /* Bouton Mes projets dans le carnet */
 .btn-projets {
   position: absolute;
-  top: 50%;
-  left: 15%;
+  top: 35rem;
+  left: 51rem;
   transform: translateY(-50%);
   font-family: 'NAV';
-  background-color: #1751bc;
+  background-color: rgba(23, 81, 188, 0.9);
   color: #f7e7ef;
   padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   font-size: 1.2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  
   z-index: 5;
   opacity: 0;
   pointer-events: none;
@@ -617,11 +611,11 @@ nav a:hover{
 /* Bouton Mes projets personnels dans le carnet */
 .btn-projets-perso {
   position: absolute;
-  top: 50%;
-  right: 15%;
+  top: 47rem;
+  right: 60rem;
   transform: translateY(-50%);
   font-family: 'NAV';
-  background-color: #1751bc;
+  background-color: rgba(23, 81, 188, 0.9);
   color: #f7e7ef;
   padding: 1rem 2rem;
   text-decoration: none;

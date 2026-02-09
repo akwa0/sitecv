@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const notebook = document.querySelector(".notebook");
   const frontImg = notebook.querySelector("#carnet");
   const pagesImg = notebook.querySelector(".pagesPRo img");
-  const pagesImgPerso = notebook.querySelector(".pagesPerso img");
   const originalSrc = frontImg.src;
   const btnProjets = document.getElementById('btnProjets');
   const btnProjetsPerso = document.getElementById('btnProjetsPerso');
@@ -60,12 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
   zone1.addEventListener('click', () => {
     frontImg.src = pagesImg.src;
     btnProjets.classList.add('visible');
-    btnProjetsPerso.classList.remove('visible');
+    btnProjetsPerso.classList.add('visible');
   });
 
   zone2.addEventListener('click', () => {
-    frontImg.src = pagesImgPerso.src;
-    btnProjets.classList.remove('visible');
+    frontImg.src = pagesImg.src;
+    btnProjets.classList.add('visible');
     btnProjetsPerso.classList.add('visible');
   });
 

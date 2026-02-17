@@ -12,14 +12,14 @@
  
     <div class="container">
     <h1>POINAMBALOM LISA</h1>
-    <h3>DEVELOPPEUSE WEB & ARTISTE</h3>
+    <h3 data-i18n="subtitle">DEVELOPPEUSE WEB & ARTISTE</h3>
     </div>
 
     <div class="premiereZone">
     <nav >
-        <a href="#zonePasseport">Mon profil</a>
-        <a href="#ZoneProjet">Mes projets</a>
-        <a href="#ZoneContact">Me contacter</a>
+        <a href="#zonePasseport" data-i18n="nav_profil">Mon profil</a>
+        <a href="#ZoneProjet" data-i18n="nav_projets">Mes projets</a>
+        <a href="#ZoneContact" data-i18n="nav_contact">Me contacter</a>
     </nav>
 
     <!--passeport-->
@@ -29,23 +29,23 @@
         <div class="passeportInside">
             <img  class="passeportVideo" src="style/media/Illustration_sans_titre 9.png" alt="">
            <div class="passeportTitle"><h4>PASS CARD</h4>
-        <a href="#" data-section="competence">Competence : click here</a>
-        <a href="#" data-section="formation">Formation : click here</a>
-        <a href="#" data-section="experience">Experience : click here</a> 
-        <a href="" >Langues : FR / EN</a>
+        <a href="#" data-section="competence" data-i18n="pass_competence">Competences : cliquez ici</a>
+        <a href="#" data-section="formation" data-i18n="pass_formation">Formation : cliquez ici</a>
+        <a href="#" data-section="experience" data-i18n="pass_experience">Experience : cliquez ici</a>
+        <span class="lang-switch">Langues : <a href="#" id="langFR" class="lang-btn active">FR</a> / <a href="#" id="langEN" class="lang-btn">EN</a></span>
     
     </div>
             <div class="imageprofil">
                 <img src="style/media/IMG_0468.png" alt="">
                 <div class="couleurline"></div>
-                <a class="codebarre" href="">..............Logiciel..............</a>
+                <a class="codebarre" href="" data-i18n="codebarre">..............Logiciel..............</a>
                 <div class="tooltipCodeBarre hidden">
                     <div class="logiciels-content">
-                        <h5>LOGICIELS</h5>
+                        <h5 data-i18n="logiciels_title">LOGICIELS</h5>
 
                         <div class="logiciels-grid">
                             <div class="logiciels-column">
-                                <h6>Graphisme & UX/UI</h6>
+                                <h6 data-i18n="log_graphisme">Graphisme & UX/UI</h6>
                                 <ul>
                                     <li>Photoshop</li>
                                     <li>Illustrator</li>
@@ -68,7 +68,7 @@
                                     <li>Responsive web design</li>
                                 </ul>
 
-                                <h6>Serveur Web</h6>
+                                <h6 data-i18n="log_serveur">Serveur Web</h6>
                                 <ul>
                                     <li>Apache</li>
                                     <li>Configuration IIS</li>
@@ -90,7 +90,7 @@
                                     <li>Github</li>
                                 </ul>
 
-                                <h6>Base de donnees</h6>
+                                <h6 data-i18n="log_bdd">Base de donnees</h6>
                                 <ul>
                                     <li>MySQL</li>
                                     <li>SQL</li>
@@ -109,23 +109,23 @@
         <button class="closeBox">X</button>
         <div class="infoContent">
             <span class="code-block">
-                <pre id="formation-code-formation">
+                <pre id="formation-code-formation" data-i18n-html="box_formation">
 <span class="tag">&lt;h5&gt;</span><span class="text">Formation</span><span class="tag">&lt;/h5&gt;</span>
 <span class="spacer"></span>
 <span class="tag">&lt;p&gt;</span><span class="value">Web Application Developer 2025-2026
 Interface3 Bruxelles
-CECAF et Europass métier 
+CECAF et Europass métier
 -1540 heures de cours intensifs
 -Hackathon
--Projets de développement web 
+-Projets de développement web
 (JS, Symfony, Asp.net)</span><span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;p&gt;</span><span class="value">L1 d’Histoire de l’Art et Archéologie 2021
+<span class="tag">&lt;p&gt;</span><span class="value">L1 d'Histoire de l'Art et Archéologie 2021
 Université Paul Valérie Montpellier</span><span class="tag">&lt;/p&gt;</span>
 <span class="tag">&lt;p&gt;</span><span class="value">Master en Arts Plastiques 2020
 Le 75, Bruxelles</span><span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;p&gt;</span><span class="value">Diplôme National d’Art 2019
+<span class="tag">&lt;p&gt;</span><span class="value">Diplôme National d'Art 2019
 Esa Réunion</span><span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;p&gt;</span><span class="value">Baccalauréat spécialité théâtre 2016 
+<span class="tag">&lt;p&gt;</span><span class="value">Baccalauréat spécialité théâtre 2016
 Lycée Amiral Bouvet, Réunion</span><span class="tag">&lt;/p&gt;</span>
                 </pre>
             </span>
@@ -135,24 +135,24 @@ Lycée Amiral Bouvet, Réunion</span><span class="tag">&lt;/p&gt;</span>
         <button class="closeBox">X</button>
         <div class="infoContent">
             <span class="code-block">
-                <pre id="formation-code-experience">
+                <pre id="formation-code-experience" data-i18n-html="box_experience">
 <span class="tag">&lt;h5&gt;</span><span class="text">Expérience</span><span class="tag">&lt;/h5&gt;</span>
 <span class="spacer"></span>
 <span class="tag">&lt;p&gt;</span><span class="value">Volontaire Passa Porta Bruxelles 2023-2024
 </span><span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;p&gt;</span><span class="value">Collaborateur Polyvalent en grande distribution, Bruxelles 
-2022-2024 
+<span class="tag">&lt;p&gt;</span><span class="value">Collaborateur Polyvalent en grande distribution, Bruxelles
+2022-2024
 </span><span class="tag">&lt;/p&gt;</span>
 
 <span class="tag">&lt;p&gt;</span><span class="value">Formation Gestion de conflits, Montpellier 2022 </span><span class="tag">&lt;/p&gt;</span>
 
-<span class="tag">&lt;p&gt;</span><span class="value">Formation  Premiers secours PSC1, Montpellier 2022 </span><span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span><span class="value">Formation Premiers secours PSC1, Montpellier 2022 </span><span class="tag">&lt;/p&gt;</span>
 
 <span class="tag">&lt;p&gt;</span><span class="value">Cours de théâtre pour adultes et enfants<br> Montpellier 2021-2022
 Association de théâtre Octopus expression
  </span><span class="tag">&lt;/p&gt;</span>
 
-<span class="tag">&lt;p&gt;</span><span class="value">Médiation culturelle et montage de l’exposition,<br> Île de la Réunion 2018 
+<span class="tag">&lt;p&gt;</span><span class="value">Médiation culturelle et montage de l'exposition,<br> Île de la Réunion 2018
 
 </span><span class="tag">&lt;/p&gt;</span>
                 </pre>
@@ -163,15 +163,15 @@ Association de théâtre Octopus expression
         <button class="closeBox">X</button>
         <div class="infoContent">
             <span class="code-block">
-                <pre id="formation-code-competence">
+                <pre id="formation-code-competence" data-i18n-html="box_competence">
 <span class="tag">&lt;h5&gt;</span><span class="text">Competences</span><span class="tag">&lt;/h5&gt;</span>
 <span class="spacer"></span>
 <span class="tag">&lt;p&gt;</span><span class="value">Développement  Frontend
 Développement Backend           photographie
 Gestion de Bases de données     Capacité à concevoir et à développer un projet artistique cohérent
-Montage Vidéo                   Notion de montage d’exposition et de scénographie
+Montage Vidéo                   Notion de montage d'exposition et de scénographie
 Retouche photo                  Gestion de projets
-Illustration 
+Illustration
 </span><span class="tag">&lt;/p&gt;</span>
                 </pre>
             </span>
@@ -185,8 +185,8 @@ Illustration
   <div class="notebook">
   <img src="style/media/carnetnotopen.jpg" alt="Carnet fermé">
 
-  <div id="zone1" ></div>
-  <div id="zone2" ></div>
+  <div id="zone1"></div>
+  <div id="zone2"></div>
 
   <div > <img id="carnet" src="style/media/carnetNotOpen.png" alt="Carnet fermé"></div>
 
@@ -196,8 +196,9 @@ Illustration
 
    
 
-   <a href="projets.html" class="btn-projets" id="btnProjets">Mes projets</a>
-   <a href="projets-personnels.html" class="btn-projets-perso" id="btnProjetsPerso">Portfolio <br>personnels</a>
+   <span class="notebook-hint" id="notebookHint" data-i18n="notebook_hint">cliquez sur le carnet </span>
+   <a href="projets.html" class="btn-projets" id="btnProjets" data-i18n-html="btn_projets">Mes projets<br> en programation</a>
+   <a href="projets-personnels.html" class="btn-projets-perso" id="btnProjetsPerso" data-i18n-html="btn_portfolio">Mes projets<br>personnels</a>
     </div>
 
 </div>
@@ -211,9 +212,9 @@ Illustration
 
 <div id="ZoneContact">
     <div class="contact">
-        <h2>Contactez-moi</h2>
-        <p class="contact-intro">Une question ? Un projet ? N'hésitez pas à me contacter !</p>
-        <p class="contact-response-time">Je réponds généralement sous 24h</p>
+        <h2 data-i18n="contact_titre">Contactez-moi</h2>
+        <p class="contact-intro" data-i18n="contact_intro">Une question ? Un projet ? N'hésitez pas à me contacter !</p>
+        <p class="contact-response-time" data-i18n="contact_reponse">Je réponds généralement sous 24h</p>
 
         <div class="social-links">
             <a href="mailto:poinambalom.l@gmail.com" class="social-link email">
@@ -239,18 +240,18 @@ Illustration
         </div>
 
          <form class="contact-form" id="contactForm">
-    <label for="name">Nom :</label>
-    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    <label for="name" data-i18n="form_nom">Nom :</label>
+    <input type="text" id="name" name="name" data-i18n-placeholder="form_nom_ph" placeholder="Votre nom" required>
 
     <label for="email">Email :</label>
-    <input type="email" id="email" name="email" placeholder="Votre email" required>
+    <input type="email" id="email" name="email" data-i18n-placeholder="form_email_ph" placeholder="Votre email" required>
 
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" rows="4" placeholder="Votre message..." required maxlength="500"></textarea>
-    <div class="char-counter"><span id="charCount">0</span>/500 caractères</div>
+    <label for="message" data-i18n="form_message">Message :</label>
+    <textarea id="message" name="message" rows="4" data-i18n-placeholder="form_message_ph" placeholder="Votre message..." required maxlength="500"></textarea>
+    <div class="char-counter"><span id="charCount">0</span>/500 <span data-i18n="form_caracteres">caractères</span></div>
 
     <button type="submit" class="submit-btn">
-        <span class="btn-text">Envoyer</span>
+        <span class="btn-text" data-i18n="form_envoyer">Envoyer</span>
         <span class="btn-icon">➤</span>
     </button>
   </form>

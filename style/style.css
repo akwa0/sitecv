@@ -509,10 +509,37 @@ nav a:hover{
 
 .notebook {
   position: relative;
-  width: 100rem; /* ajuste selon ton image */
+  width: 100rem;
   margin: auto;
   height: 60rem;
   cursor: pointer;
+}
+
+.notebook-hint {
+  position: absolute;
+  top: 35rem;
+  left: 58rem;
+  transform: translate(-50%, -50%);
+  font-family: 'NAV';
+  font-size: 1.2rem;
+  color: #f7e7ef;
+  background-color: rgba(23, 81, 188, 0.6);
+  padding: 0.6rem 1.5rem;
+  border-radius: 1rem;
+  z-index: 10;
+  animation: hint-pulse 2.5s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.notebook-hint.hidden {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes hint-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
 }
 
 .notebook img {
@@ -539,23 +566,17 @@ nav a:hover{
 #zone1, #zone2 {
   position: absolute;
   top: 0;
- 
-  
   cursor: pointer;
-  z-index: 3; /* au-dessus du carnet */
-  background-color: transparent; /* deviens invisible, tu peux remettre la couleur pour debug */
+  z-index: 3;
+  background-color: transparent;
 }
 #zone1 {
- 
   right: 30rem;
   width: 25%;
   opacity: 20%;
-   height: 40em;
-   top: 18rem;
-  /* background-color: rgba(0, 255, 255, 0.2);  <-- à garder temporairement pour tester */
+  height: 40em;
+  top: 18rem;
 }
-
-
 
 /* L'image des pages intérieures */
 .pagesPRo {
@@ -571,18 +592,18 @@ nav a:hover{
 
 /* Quand le carnet est "ouvert" */
 .notebook.open #carnet {
-  opacity: 0; /* fait disparaître la couverture */
+  opacity: 0;
 }
 
 .notebook.open .pages {
-  opacity: 1; /* fait apparaître les pages */
+  opacity: 1;
 }
 
 /* Bouton Mes projets dans le carnet */
 .btn-projets {
   position: absolute;
   top: 35rem;
-  left: 51rem;
+  left: 50rem;
   transform: translateY(-50%);
   font-family: 'NAV';
   background-color: rgba(23, 81, 188, 0.9);
@@ -890,4 +911,32 @@ textarea::placeholder {
 
 input,textarea{
     color:#1751bc;
+}
+
+/* Boutons changement de langue */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #1751bc;
+}
+
+.lang-btn {
+    text-decoration: none;
+    color: #1751bc;
+    font-weight: normal;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    color: #e1235a;
+}
+
+.lang-btn.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #e1235a;
 }

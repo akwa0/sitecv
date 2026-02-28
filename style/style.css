@@ -1,21 +1,27 @@
 @font-face {
     font-family: 'POINAMBALOM LISA';
-    src: url('/style/typo/squarex st.ttf');
+    src: url('typo/squarex st.ttf');
 }
 
 @font-face {
     font-family: 'DEVELOPPEUSE';
-    src: url('/style/typo/CascadiaCode-jEZzj.ttf');
+    src: url('typo/CascadiaCode-jEZzj.ttf');
 }
 
 @font-face {
     font-family: 'NAV';
-    src: url('/style/typo/CascadiaCode-jEZzj.ttf');
+    src: url('typo/CascadiaCode-jEZzj.ttf');
 }
 
 @font-face{
     font-family: 'CODEBARRE';
-    src: url('/style/typo/BarcodeFont.ttf');
+    src: url('typo/BarcodeFont.ttf');
+}
+*{
+  margin: 0;
+  padding: 0; 
+  
+  
 }
 
 html, body{
@@ -45,7 +51,7 @@ h1{
     color:#1751bc;
     margin-bottom: 0.2rem;
     font-size: 4rem;
-    transform: translateX(6em);
+    transform: translateX(20vw);
 }
 
 h3{
@@ -55,8 +61,8 @@ h3{
     color:#1751bc;
     font-size: 2em;
     margin-top:0;
-    transform: translateX(30em);
-    
+    transform: translateX(50vw);
+
 }
 
 nav{
@@ -79,9 +85,9 @@ nav a:hover{
 }
 .premiereZone{
     display:flex;
-    height: 50rem;
-    
-    
+    min-height: 50rem;
+
+
 }
 .premiereZone nav {
   width: 220px; /* largeur fixe */
@@ -186,31 +192,39 @@ nav a:hover{
 
 .passeport{
     background-color:#7f9ae5 ;
-    height: 27rem;
-    width: 50rem;
+    height: 48vh;
+    max-width: 95vh;
+    width: 100%;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-
+    
     
 }
 .passeportInside{
     background-color:#c2d1f2 ;
-    height: 23rem;
-    width: 48rem;
+    height: 25rem;
+    max-width: 70rem;
+    width: calc(100% - 2rem);
     border-radius: 1rem;
     
     
 }
 #zonePasseport{
-    padding-left: 43rem;
-    padding-top: 8rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-left: 240px;
+    box-sizing: border-box;
 }
 
 .passeportVideo{
-    width: 17rem;
+    width: 20rem;
     height: 100%;
     object-fit: cover;
     float: right;
@@ -253,7 +267,7 @@ nav a:hover{
 }
 .BoxCompetence{
     position:absolute;
-    top: 47rem;
+    top: 40rem;
     right: 33rem;
     width: 47rem;
     height: auto;
@@ -401,10 +415,10 @@ nav a:hover{
 }
 
 #ZoneProjet{
-    background-color:#f5f5f5;
-    width: 80%;
-    height: 50rem;
-    margin-left: auto;
+    background-color:#f7e7ef;
+    width: 186vh;
+    height: 62rem;
+    margin-left: 20vh;
     margin-right: auto;
 
 }
@@ -514,7 +528,8 @@ nav a:hover{
 
 .notebook {
   position: relative;
-  width: 100rem;
+  max-width: 100rem;
+  width: 100%;
   margin: auto;
   height: 60rem;
   cursor: pointer;
@@ -522,8 +537,8 @@ nav a:hover{
 
 .notebook-hint {
   position: absolute;
-  top: 35rem;
-  left: 58rem;
+  top: 60vh;
+  left: 98vh;
   transform: translate(-50%, -50%);
   font-family: 'NAV';
   font-size: 1.2rem;
@@ -548,7 +563,8 @@ nav a:hover{
 }
 
 .notebook img {
-  width: 100rem;
+  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -607,8 +623,8 @@ nav a:hover{
 /* Bouton Mes projets dans le carnet */
 .btn-projets {
   position: absolute;
-  top: 35rem;
-  left: 50rem;
+  top: 80vh;
+  left: 40vh;
   transform: translateY(-50%);
   font-family: 'NAV';
   background-color: rgba(23, 81, 188, 0.9);
@@ -637,8 +653,8 @@ nav a:hover{
 /* Bouton Mes projets personnels dans le carnet */
 .btn-projets-perso {
   position: absolute;
-  top: 47rem;
-  right: 60rem;
+  top: 60vh;
+  right: 57vh;
   transform: translateY(-50%);
   font-family: 'NAV';
   background-color: rgba(23, 81, 188, 0.9);
@@ -720,6 +736,16 @@ nav a:hover{
         font-size: 1.2rem;
         transform: translateX(8em);
     }
+
+    .passeport {
+        max-width: 48rem;
+    }
+    .passeportInside {
+        max-width: 46rem;
+    }
+    #zonePasseport {
+        padding-left: 180px;
+    }
 }
 
 
@@ -732,6 +758,35 @@ nav a:hover{
     h3 {
         font-size: 1rem;
         transform: translateX(2em);
+    }
+
+    .premiereZone {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .premiereZone nav {
+        position: static;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    #zonePasseport {
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2rem;
+    }
+
+    .passeport {
+        max-width: 100%;
+    }
+
+    .passeportInside {
+        width: calc(100% - 1rem);
+        max-width: 100%;
     }
 }
 

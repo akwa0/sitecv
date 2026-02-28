@@ -227,6 +227,10 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.parentElement.classList.add("hidden");
     });
   });
+  // ===== Gestion du carnet (section Projets) =====
+  // Cliquer sur le carnet remplace l'image de couverture par les pages intérieures
+  // et affiche les boutons de navigation vers les projets.
+  // Quand l'utilisateur remonte vers le passeport ou la zone contact, le carnet se referme.
   const zone1 = document.getElementById('zone1');
   const zone2 = document.getElementById('zone2');
   const notebook = document.querySelector(".notebook");
@@ -247,14 +251,18 @@ document.addEventListener("DOMContentLoaded", function () {
   zone1.addEventListener('click', ouvrirCarnet);
   zone2.addEventListener('click', ouvrirCarnet);
 
+  // Zone4 et Zone5 sont des div invisibles positionnées dans la page
+  // utilisées uniquement pour détecter quand le scroll revient vers le haut
   const zonePasseport = document.getElementById('Zone4');
   const zoneContact = document.getElementById('Zone5');
 
+  // Retourne true si l'élément est au moins partiellement visible à l'écran
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (rect.top < window.innerHeight && rect.bottom > 0);
   }
 
+  // Referme le carnet quand on scrolle vers le passeport ou le contact
   window.addEventListener('scroll', () => {
     if (isInViewport(zonePasseport) || isInViewport(zoneContact)) {
       frontImg.src = originalSrc;
@@ -280,6 +288,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setLanguage(savedLang);
   }
 
+  // ===== Tooltip code-barres =====
+  // Affiche la liste des logiciels au survol du code-barres
   const codebarre = document.querySelector('.codebarre');
   const tooltipCodeBarre = document.querySelector('.tooltipCodeBarre');
 

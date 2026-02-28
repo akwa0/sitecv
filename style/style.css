@@ -1,8 +1,10 @@
+/* ===== Polices de caractères ===== */
 @font-face {
     font-family: 'POINAMBALOM LISA';
     src: url('typo/squarex st.ttf');
 }
 
+/* DEVELOPPEUSE et NAV utilisent la même police (Cascadia Code) */
 @font-face {
     font-family: 'DEVELOPPEUSE';
     src: url('typo/CascadiaCode-jEZzj.ttf');
@@ -17,16 +19,14 @@
     font-family: 'CODEBARRE';
     src: url('typo/BarcodeFont.ttf');
 }
+
+/* ===== Réinitialisation globale ===== */
 *{
   margin: 0;
-  padding: 0; 
-  
-  
+  padding: 0;
 }
 
 html, body{
-    margin: 0;
-    padding: 0;
     background-color:#f7e7ef;
     overflow-x: hidden;
     width: 100%;
@@ -41,11 +41,9 @@ body::-webkit-scrollbar{
     display:flex;
     flex-direction: column;
     padding-top: 0.2rem;
-
-    
 }
+
 h1{
-    
     font-family:"POINAMBALOM LISA";
     letter-spacing:0.2em;
     color:#1751bc;
@@ -55,52 +53,49 @@ h1{
 }
 
 h3{
-    
     font-family:"DEVELOPPEUSE";
     letter-spacing:0.2em;
     color:#1751bc;
     font-size: 2em;
     margin-top:0;
     transform: translateX(50vw);
-
 }
 
+/* ===== Navigation fixe à gauche ===== */
 nav{
     display:flex;
     flex-direction:column;
     gap:5rem;
     padding-left: 2rem;
     padding-top: 5rem;
-    
-
-    
 }
+
 nav a{
     text-decoration: none;
     color:#1751bc;
-    font-family: 'NAV';    
+    font-family: 'NAV';
 }
+
 nav a:hover{
     color:#e1235a;
 }
+
 .premiereZone{
     display:flex;
     min-height: 50rem;
-
-
 }
+
 .premiereZone nav {
-  width: 220px; /* largeur fixe */
+    width: 220px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     padding-top: 8rem;
-    position:fixed
+    position:fixed;
 }
 
-
-
+/* ===== Photo de profil, ligne décorative et code-barres ===== */
 .imageprofil{
     position: relative;
     width: 15rem;
@@ -110,17 +105,12 @@ nav a:hover{
     padding-top: 1rem;
     padding-left: 1rem;
     object-fit: cover;
-
 }
 
-
-/*photo, ligne et code barre*/
 .imageprofil img {
     width: 100%;
     height: 17rem;
     object-fit: cover;
-   
-
 }
 
 .couleurline{
@@ -128,7 +118,6 @@ nav a:hover{
     height: 1.7rem;
     width: 100%;
     margin-top: 0.4rem;
-
 }
 
 .codebarre{
@@ -137,19 +126,13 @@ nav a:hover{
     font-size: 2.5rem;
     text-decoration: none;
     margin-top: 0.2rem;
-    
-    
 }
+
 .codebarre:hover{
     color:#1751bc;
 }
 
-
-
-
-
-
-/*Passesort*/
+/* ===== Passeport ===== */
 .passeportTitle{
     font-family: 'NAV';
     width: 12rem;
@@ -157,20 +140,13 @@ nav a:hover{
     float: right;
     margin-top: 1rem;
     color: #1751bc;
-   
-    
-
 }
 
 .passeportTitle h4{
-    
     text-align: center;
     font-size: 2rem;
     margin: 0;
-    
-
 }
-
 
 .passeportTitle a{
     display:flex;
@@ -179,19 +155,14 @@ nav a:hover{
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     font-size: 0.8rem;
-    
-    
-    
-    
-    
 }
-.passeportTitle a:hover{
-    color:#e1235a;  }
-    
 
+.passeportTitle a:hover{
+    color:#e1235a;
+}
 
 .passeport{
-    background-color:#7f9ae5 ;
+    background-color:#7f9ae5;
     height: 48vh;
     max-width: 95vh;
     width: 100%;
@@ -200,18 +171,16 @@ nav a:hover{
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    
-    
 }
+
 .passeportInside{
-    background-color:#c2d1f2 ;
+    background-color:#c2d1f2;
     height: 25rem;
     max-width: 70rem;
     width: calc(100% - 2rem);
     border-radius: 1rem;
-    
-    
 }
+
 #zonePasseport{
     flex: 1;
     display: flex;
@@ -228,11 +197,9 @@ nav a:hover{
     height: 100%;
     object-fit: cover;
     float: right;
-    
 }
 
-/*infoBox*/
-
+/* ===== Boîtes d'information (Formation, Expérience, Compétences) ===== */
 .BoxFormation{
     position:absolute;
     top: 13rem;
@@ -249,6 +216,7 @@ nav a:hover{
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0,5;
 }
+
 .BoxExperience{
     position:absolute;
     top: 10rem;
@@ -265,6 +233,7 @@ nav a:hover{
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0,5;
 }
+
 .BoxCompetence{
     position:absolute;
     top: 40rem;
@@ -284,6 +253,8 @@ nav a:hover{
     opacity: 0,5;
     z-index: 10;
 }
+
+/* Tooltip affiché au survol du code-barres : affiche la liste des logiciels */
 .tooltipCodeBarre {
     position: absolute;
     top: 0;
@@ -304,13 +275,14 @@ nav a:hover{
     padding: 1rem;
 }
 
-
+/* Classe utilitaire : masque un élément avec une animation de glissement vers le bas */
 .hidden{
     opacity: 0;
     transform: translateY(3rem);
     pointer-events: none;
 }
 
+/* Override pour le tooltip : pas de déplacement au masquage */
 .tooltipCodeBarre.hidden{
     opacity: 0;
     transform: none;
@@ -359,52 +331,32 @@ nav a:hover{
     line-height: 1.2;
 }
 
-#closeBox{
-    background: none;
-    border:none;
-    font-size: 1.2rem;
-    float:right;
-    cursor:pointer;
-    
-}
-
-
+/* ===== Contenu des boîtes (style éditeur de code) ===== */
 .code-block .spacer::before {
   content: "\A"; /* saut de ligne */
   white-space: pre;
   display: block;
-  height: 15px; /* hauteur de l'espace, à ajuster */
+  height: 15px;
 }
 
 .code-block .tag {
-  color: #569cd6; /* balises HTML */
+  color: #569cd6; /* couleur des balises HTML */
   font-size: 0.85rem;
 }
 
 .code-block .text {
-  color: #cc6363; /* titre en cyan */
+  color: #cc6363; /* couleur du titre */
   font-size: 1rem;
   font-weight: bold;
 }
 
 .code-block .value {
-  color: #d4d4d4; /* contenu en gris clair */
+  color: #d4d4d4; /* couleur du contenu */
   font-size: 0.85rem;
   line-height: 1.6;
 }
 
-/* Effet "écriture" */
-/*#formation-code-competence,
-#formation-code-formation,
-#formation-code-experience {
-  border-right: 2px solid #ffffff55;
-  width: 0;
-  overflow: hidden;
-  white-space: pre-wrap;
-  line-height: 1.8;}
-  /* Animation sera ajoutée dynamiquement par JavaScript */
-
-
+/* Keyframes pour l'effet de frappe (appliqués dynamiquement via JavaScript) */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -414,15 +366,16 @@ nav a:hover{
   50% { border-color: transparent; }
 }
 
+/* ===== Zone Projet ===== */
 #ZoneProjet{
     background-color:#f7e7ef;
     width: 186vh;
     height: 62rem;
     margin-left: 20vh;
     margin-right: auto;
-
 }
 
+/* ===== Zone Contact ===== */
 #ZoneContact{
     width: 80%;
     height: 50rem;
@@ -430,8 +383,6 @@ nav a:hover{
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    
-    
 }
 
 .contact{
@@ -440,7 +391,7 @@ nav a:hover{
     min-height: auto;
     background-color:#6281ec60;
     border-radius: 1rem;
-    border: 0.8rem solid #1751bc30 ;
+    border: 0.8rem solid #1751bc30;
     border-style:double;
     margin: 10rem auto;
     padding: 25px;
@@ -483,49 +434,14 @@ nav a:hover{
     font-style: italic;
 }
 
-
+/* Images couvrant toute la zone projet */
 #ZoneProjet img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 
-
-
-#notebook{
-  
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: left;
-  transition: transform 1.2s ease-in-out;
-  z-index: 2;
-}
-.pages {
- 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  z-index: 1;
-}
-.notebook.open #carnet {
-  transform: rotateY(-150deg);
-}
-.notebook.open .pages {
-  opacity: 1;
-}
-
-
-
-
-
+/* ===== Carnet (section Projets) ===== */
 .notebook {
   position: relative;
   max-width: 100rem;
@@ -535,6 +451,7 @@ nav a:hover{
   cursor: pointer;
 }
 
+/* Indication de clic animée, disparaît après ouverture du carnet */
 .notebook-hint {
   position: absolute;
   top: 60vh;
@@ -568,22 +485,18 @@ nav a:hover{
   display: block;
 }
 
-/* L'image de base (le carnet de fond) */
-.base-image {
-  position: relative;
-  z-index: 0;
-}
-
-/* La couverture (au-dessus du carnet) */
+/* Couverture du carnet (superposée par-dessus l'image de fond) */
 #carnet {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2; /* au-dessus */
+  z-index: 2;
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+/* Zones de clic transparentes sur la couverture du carnet */
 #zone1, #zone2 {
   position: absolute;
   top: 0;
@@ -591,6 +504,7 @@ nav a:hover{
   z-index: 3;
   background-color: transparent;
 }
+
 #zone1 {
   right: 30rem;
   width: 25%;
@@ -599,7 +513,7 @@ nav a:hover{
   top: 18rem;
 }
 
-/* L'image des pages intérieures */
+/* Pages intérieures du carnet (révélées après ouverture) */
 .pagesPRo {
   position: absolute;
   top: 0;
@@ -611,16 +525,7 @@ nav a:hover{
   transition: opacity 0.8s ease;
 }
 
-/* Quand le carnet est "ouvert" */
-.notebook.open #carnet {
-  opacity: 0;
-}
-
-.notebook.open .pages {
-  opacity: 1;
-}
-
-/* Bouton Mes projets dans le carnet */
+/* Bouton "Mes projets" — caché par défaut, visible après ouverture du carnet */
 .btn-projets {
   position: absolute;
   top: 80vh;
@@ -634,7 +539,6 @@ nav a:hover{
   border-radius: 0.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   font-size: 1.2rem;
-  
   z-index: 5;
   opacity: 0;
   pointer-events: none;
@@ -650,7 +554,7 @@ nav a:hover{
   pointer-events: auto;
 }
 
-/* Bouton Mes projets personnels dans le carnet */
+/* Bouton "Mes projets personnels" — caché par défaut, visible après ouverture du carnet */
 .btn-projets-perso {
   position: absolute;
   top: 60vh;
@@ -680,6 +584,7 @@ nav a:hover{
   pointer-events: auto;
 }
 
+/* Zones invisibles utilisées par JavaScript pour détecter la position de scroll */
 #Zone4{
     width: 190vh;
     height: 30vh;
@@ -691,6 +596,7 @@ nav a:hover{
     opacity: 0;
     pointer-events: none;
 }
+
 #Zone5{
     width: 190vh;
     height: 50vh;
@@ -703,17 +609,7 @@ nav a:hover{
     pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-/* responsive*/
-
+/* ===== Responsive ===== */
 @media (max-width: 1200px) {
     h1 {
         font-size: 3rem;
@@ -747,7 +643,6 @@ nav a:hover{
         padding-left: 180px;
     }
 }
-
 
 @media (max-width: 768px) {
     h1 {
@@ -790,20 +685,7 @@ nav a:hover{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Section réseaux sociaux */
+/* ===== Réseaux sociaux ===== */
 .social-links {
   display: flex;
   justify-content: center;
@@ -854,11 +736,7 @@ nav a:hover{
   border-color: #e1235a;
 }
 
-.contact-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
+/* ===== Formulaire de contact ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -895,6 +773,7 @@ nav a:hover{
   margin-bottom: 0.3rem;
 }
 
+/* Bouton d'envoi du formulaire */
 .submit-btn {
   padding: 10px 20px;
   background-color:#e0225b;
@@ -933,6 +812,7 @@ nav a:hover{
   transform: translateX(5px);
 }
 
+/* Compteur de caractères sous le champ message */
 .char-counter {
   text-align: right;
   font-size: 0.85rem;
@@ -941,7 +821,7 @@ nav a:hover{
   margin-bottom: 0.5rem;
 }
 
-/* Message de statut du formulaire */
+/* Message de statut affiché après l'envoi du formulaire */
 .form-status {
   margin-top: 1rem;
   padding: 1rem;
@@ -969,11 +849,11 @@ textarea::placeholder {
     color: #1751bc;
 }
 
-input,textarea{
+input, textarea{
     color:#1751bc;
 }
 
-/* Boutons changement de langue */
+/* ===== Boutons de changement de langue ===== */
 .lang-switch {
     display: flex;
     align-items: center;
